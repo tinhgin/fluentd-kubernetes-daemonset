@@ -1,3 +1,5 @@
 FROM fluent/fluentd-kubernetes-daemonset:v1.4.2-debian-elasticsearch-1.1
 
-RUN gem install fluent-plugin-detect-exceptions
+RUN set -x  \
+  && gem install fluent-plugin-detect-exceptions \
+  && gem install fluent-plugin-concat \
